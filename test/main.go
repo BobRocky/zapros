@@ -11,9 +11,6 @@ import (
 )
 
 func main() {
-
-	//data := []byte(`{"fueltank_volume": 600,"consumption": 30,"fuel_in_tank": 100,"min_fuel_balance_litres": 50,"min_fuel_balance_km": 0,"min_distance": 0,"min_benefit": 0,"min_fuel_level_percent":0 ,"max_distance_from_route": 0,"fuel_types": 0, "nav_points": [0:"24.667522 57.429639", 1:37.622504 55.753215"]"}`)
-
 	type znach struct {
 		Fueltank_volume         int `json:"fueltank_volume"`
 		Consumption             int `json:"consumption"`
@@ -25,8 +22,7 @@ func main() {
 		Min_fuel_level_percent  int `json:"min_fuel_level_percent"`
 		Max_distance_from_route int `json:"max_distance_from_route"`
 		Fuel_types              int `json:"fuel_types"`
-		//From                    []float64 `json:"navAddressFrom:"`
-		//	Addres                  []float64 `json:"navAddressTo:"`
+
 		Nav_points []string `json:"nav_points"`
 	}
 
@@ -41,9 +37,7 @@ func main() {
 		Min_fuel_level_percent:  0,
 		Max_distance_from_route: 0,
 		Fuel_types:              0,
-		//From:                    []float64{37.622504, 55.753215},
-		//	Addres:                  []float64{49.106324, 55.798551},
-		Nav_points: []string{"37.622504 55.753215", "49.106324 55.798551"}}
+		Nav_points:              []string{"37.622504 55.753215", "49.106324 55.798551"}}
 
 	//fmt.Println(znachVar1)
 
