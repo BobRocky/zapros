@@ -2,11 +2,11 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"io"
 	"log"
 	"net/http"
-	"net/url"
 )
 
 func Derevna() string {
@@ -63,16 +63,19 @@ func Moscow() string {
 		bytes = bytes[:n]
 	}
 	return string(bytes)
-}
+} // min_fuel_balance_km: 0, min_distance: 0, min_benefit: 0, min_fuel_level_percent:0 , max_distance_from_route: 0, fuel_types: 0
+
 func main() {
 
-	//data := []byte("600, 30, 100, 50, null, null, null, null, null, null, 37.622504 55.753215 , 37.622504 55.753215")
-	//r := bytes.NewReader(data)
+	data := []byte("t j")
+
+	r := bytes.NewReader(data)
 	tr := &http.Transport{DisableKeepAlives: true}
 	client := &http.Client{Transport: tr}
-	//resp, err := client.FormPost("https://tms-api-service-dev.redradar.ru/fuel_calc", "", r)
-	resp, err := client.PostForm("https://tms-api-service-dev.redradar.ru/fuel_calc", url.Values{"fueltank_volume": {"600"}, "consumption": {"30"}, "fuel_in_tank": {"100"}, "min_fuel_balance_litres": {"50"}, "min_fuel_balance_km": {"null"}, "min_distance": {"null"}, "min_benefit": {"null"}, "min_fuel_level_percent": {"null"}, "max_distance_from_route": {"null"}, "fuel_types": {"null"}, "nav_points": {"37.622504 55.753215", "49.106324 55.798551"}})
-	fmt.Println(resp)
+	//resp, err := client.FormPost("https://tms-api-service-dev.redradar.ru/fuel_calc", "application/json", r)
+	resp, err := client.Post("https://tms-api-service-dev.redradar.ru/fuel_calc", "application/json", r)
+	v := r
+	fmt.Println(v)
 	if err != nil {
 		log.Panic("Responce:", resp, "\nError:", err)
 	}
