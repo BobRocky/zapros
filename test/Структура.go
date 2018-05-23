@@ -11,13 +11,16 @@ func main() {
 	for i <= 4 {
 		i = i + 1
 
-		type q struct {
-			x float64
-			y float64
-		}
+		//type q struct {
+		//	x float64
+		//	y float64
+		//}
 
-		Moscow := q{37.622504, 55.753215}
-		Peter := q{30.315868, 59.939095}
+		Moscow := "37.622504, 55.753215"
+		Peter := "30.315868, 59.939095"
+
+		//Moscow := q{37.622504, 55.753215}
+		//Peter := q{30.315868, 59.939095}
 		//Pskov := q{28.331786, 57.819365}
 		//Arkhangelsk := q{40.516939, 64.539393}
 		//Astrakhan := q{48.033574, 46.347869}
@@ -61,13 +64,13 @@ func main() {
 			consumption             int
 			fuel_in_tank            int
 			min_fuel_balance_litres int
-			min_fuel_balance_km     int
-			min_distance            int
-			min_benefit             int
-			min_fuel_level_percent  int
-			max_distance_from_route int
-			fuel_types              int
-			nav_points              []q
+			min_fuel_balance_km     string
+			min_distance            string
+			min_benefit             string
+			min_fuel_level_percent  string
+			max_distance_from_route string
+			fuel_types              string
+			nav_points              []string
 		}
 
 		from := Moscow
@@ -78,13 +81,13 @@ func main() {
 			consumption:             30,
 			fuel_in_tank:            100,
 			min_fuel_balance_litres: 50,
-			min_fuel_balance_km:     0,
-			min_distance:            0,
-			min_benefit:             0,
-			min_fuel_level_percent:  0,
-			max_distance_from_route: 0,
-			fuel_types:              0,
-			nav_points:              []q{from, to}}
+			min_fuel_balance_km:     "null",
+			min_distance:            "null",
+			min_benefit:             "null",
+			min_fuel_level_percent:  "null",
+			max_distance_from_route: "null",
+			fuel_types:              "null",
+			nav_points:              []string{from, to}}
 
 		fmt.Println(znacheniya)
 	}
