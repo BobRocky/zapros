@@ -12,16 +12,16 @@ import (
 
 func main() {
 	type znach struct {
-		Fueltank_volume         int `json:"fueltank_volume"`
-		Consumption             int `json:"consumption"`
-		Fuel_in_tank            int `json:"fuel_in_tank"`
-		Min_fuel_balance_litres int `json:"min_fuel_balance_litres"`
-		Min_fuel_balance_km     int `json:"min_fuel_balance_km"`
-		Min_distance            int `json:"min_distance"`
-		Min_benefit             int `json:"min_benefit"`
-		Min_fuel_level_percent  int `json:"min_fuel_level_percent"`
-		Max_distance_from_route int `json:"max_distance_from_route"`
-		Fuel_types              int `json:"fuel_types"`
+		Fueltank_volume         int    `json:"fueltank_volume"`
+		Consumption             int    `json:"consumption"`
+		Fuel_in_tank            int    `json:"fuel_in_tank"`
+		Min_fuel_balance_litres int    `json:"min_fuel_balance_litres"`
+		Min_fuel_balance_km     string `json:"min_fuel_balance_km"`
+		Min_distance            string `json:"min_distance"`
+		Min_benefit             string `json:"min_benefit"`
+		Min_fuel_level_percent  string `json:"min_fuel_level_percent"`
+		Max_distance_from_route string `json:"max_distance_from_route"`
+		Fuel_types              string `json:"fuel_types"`
 
 		Nav_points []string `json:"nav_points"`
 	}
@@ -31,12 +31,12 @@ func main() {
 		Consumption:             30,
 		Fuel_in_tank:            100,
 		Min_fuel_balance_litres: 50,
-		Min_fuel_balance_km:     0,
-		Min_distance:            0,
-		Min_benefit:             0,
-		Min_fuel_level_percent:  0,
-		Max_distance_from_route: 0,
-		Fuel_types:              0,
+		Min_fuel_balance_km:     "null",
+		Min_distance:            "null",
+		Min_benefit:             "null",
+		Min_fuel_level_percent:  "null",
+		Max_distance_from_route: "null",
+		Fuel_types:              "null",
 		Nav_points:              []string{"37.622504 55.753215", "49.106324 55.798551"}}
 
 	//fmt.Println(znachVar1)
