@@ -3,7 +3,6 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -67,15 +66,15 @@ func Moscow() string {
 
 func main() {
 
-	data := []byte("t j")
+	data := []byte(`{"fueltank_volume": 600,"consumption": 30,"fuel_in_tank": 100,"min_fuel_balance_litres": 50,"min_fuel_balance_km": 0,"min_distance": 0,"min_benefit": 0,"min_fuel_level_percent":0 ,"max_distance_from_route": 0,"fuel_types": 0, "nav_points": [0:"24.667522 57.429639", 1:37.622504 55.753215"]"}`)
 
 	r := bytes.NewReader(data)
 	tr := &http.Transport{DisableKeepAlives: true}
 	client := &http.Client{Transport: tr}
 	//resp, err := client.FormPost("https://tms-api-service-dev.redradar.ru/fuel_calc", "application/json", r)
-	resp, err := client.Post("https://tms-api-service-dev.redradar.ru/fuel_calc", "application/json", r)
-	v := r
-	fmt.Println(v)
+	resp, err := client.Post("https://tms-api-service-dev.redradar.ru/fuel_calc", "application/json, text/plain, */*", r)
+	//v := r
+	//fmt.Println(v)
 	if err != nil {
 		log.Panic("Responce:", resp, "\nError:", err)
 	}
