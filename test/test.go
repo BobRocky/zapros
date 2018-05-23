@@ -1,3 +1,13 @@
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"net/url"
+)
+
 /*package main
 
 import (
@@ -17,8 +27,8 @@ func main() {
 	io.Copy(os.Stdout, resp.Body)
 }
 http://ident.me*/
-
-/*package main
+/*
+package main
 
 import (
 	"bytes"
@@ -52,15 +62,15 @@ func main() {
 		bytes = bytes[:n]
 	}
 	log.Println(string(bytes))
-	/*	data := []byte(`{"foo":"bar"}`)
+	data := []byte(`{"foo":"bar"}`)
 		r := bytes.NewReader(data)
 		resp, err := http.Post("google.com", "application/json", r)
 		if err != nil {
 			return
 		}
 		fmt.Println(resp)
-}
-
+}*/
+/*
 package main
 
 import (
@@ -76,80 +86,20 @@ func main() {
 	fmt.Printf("%v %v", err, resp)
 }
 */
-package main
-
-import (
-	"bufio"
-	"log"
-	"net/http"
-	"os"
-	"strings"
-	"text/template"
-)
 
 func main() {
-	templates := populateTemplates()
-
-	http.HandleFunc("/",
-		func(w http.ResponseWriter, req *http.Request) {
-			requestedFile := req.URL.Path[1:]
-			template := templates.Lookup(requestedFile + ".html")
-
-			if template != nil {
-				template.Execute(w, nil)
-			} else {
-				w.WriteHeader(404)
-			}
-		})
-
-	http.HandleFunc("/img/", serveResource)
-	http.HandleFunc("/css/", serveResource)
-
-	log.Fatal(http.ListenAndServe(":3000", nil))
-}
-
-func serveResource(w http.ResponseWriter, req *http.Request) {
-	path := "public" + req.URL.Path
-	var contentType string
-	if strings.HasSuffix(path, ".css") {
-		contentType = "text/css"
-	} else if strings.HasSuffix(path, ".png") {
-		contentType = "image/png"
-	} else {
-		contentType = "text/plain"
+	var username string = "login_login"
+	var passwd string = "login_password"
+	v := url.Values{}
+	v.Add(username, "login")
+	v.Add(passwd, "passwd")
+	client := &http.Client{}
+	resp, err := http.PostForm("http://example.com/form", url.Values{"login_login": {"Value"}, "login_password": {"123"}})
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Fatal(err)
 	}
-
-	f, err := os.Open(path)
-
-	if err == nil {
-		defer f.Close()
-		w.Header().Add("Content Type", contentType)
-
-		br := bufio.NewReader(f)
-		br.WriteTo(w)
-	} else {
-		w.WriteHeader(404)
-	}
-}
-
-func populateTemplates() *template.Template {
-	result := template.New("templates")
-
-	basePath := "templates"
-	templateFolder, _ := os.Open(basePath)
-	defer templateFolder.Close()
-
-	templatePathRaw, _ := templateFolder.Readdir(-1)
-
-	templatePaths := new([]string)
-	for _, pathInfo := range templatePathRaw {
-		if !pathInfo.IsDir() {
-			*templatePaths = append(*templatePaths,
-				basePath+"/"+pathInfo.Name())
-		}
-	}
-
-	result.ParseFiles(*templatePaths...)
-
-	return result
+	bodyText, err := ioutil.ReadAll(resp.Body)
+	s = string(bodyText)
+	fmt.Println(s)
 }
