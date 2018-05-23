@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 )
 
@@ -16,20 +17,25 @@ func main() {
 		min_fuel_level_percent  int
 		max_distance_from_route int
 		fuel_types              int
+		nav_points              []float64
 	}
 
-	type nav_points struct {
-		x  float64
-		y  float64
-		x1 float64
-		y2 float64
-	}
+	znacheniya := znach{
+		fueltank_volume:         600,
+		consumption:             30,
+		fuel_in_tank:            100,
+		min_fuel_balance_litres: 50,
+		min_fuel_balance_km:     0,
+		min_distance:            0,
+		min_benefit:             0,
+		min_fuel_level_percent:  0,
+		max_distance_from_route: 0,
+		fuel_types:              0,
+		nav_points:              []float64{37.622504, 55.753215, 49.106324, 55.798551}}
 
-	cor := nav_points{37.622504, 55.753215, 49.106324, 55.798551}
+	fmt.Println(znacheniya)
 
-	data := znach{600, 30, 100, 50, 0, 0, 0, 0, 0, 0}
+	data, _ := json.Marshal(znacheniya)
 
 	fmt.Println(data)
-	fmt.Println(cor)
-	fmt.Println("q", data, cor)
 }
