@@ -1,4 +1,4 @@
-package main
+/*package main
 
 import (
 	"fmt"
@@ -85,7 +85,7 @@ func main() {
 	resp, err := http.Post("https://www.google.com", "application/octet-stream", r)
 	fmt.Printf("%v %v", err, resp)
 }
-*/
+
 
 func main() {
 	var username string = "login_login"
@@ -102,4 +102,28 @@ func main() {
 	bodyText, err := ioutil.ReadAll(resp.Body)
 	s = string(bodyText)
 	fmt.Println(s)
+}
+*/
+
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+)
+
+func main() {
+
+	type Zapros struct {
+		Fueltank_volume int
+		Consumption     int
+		Fuel_in_tank    int
+	}
+	ZaprosVar1 := &Zapros{
+		Fueltank_volume: 23123,
+		Consumption:     123123,
+		Fuel_in_tank:    3453453}
+	ZaprosVar2, _ := json.Marshal(ZaprosVar1)
+	fmt.Println(string(ZaprosVar2))
+
 }

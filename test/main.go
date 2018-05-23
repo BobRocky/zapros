@@ -10,106 +10,54 @@ import (
 	"net/http"
 )
 
-func Derevna() string {
-	//data := []byte(`{"37.622504":"55.753215"}, {"24.667522":"57.429639"}`)
-	//r := bytes.NewReader(data)
-	tr := &http.Transport{DisableKeepAlives: true}
-	client := &http.Client{Transport: tr}
-	resp, err := client.Get("https://geocode-maps.yandex.ru/1.x/?format=json&geocode=%D0%9D%D0%B0%D0%B1%D0%B5")
-	//resp, err := client.Head("https://fonts.googleapis.com/icon?family=Material+Icons")
-	//resp, err := client.Post("https://tms-api-service-dev.redradar.ru/fuel_calc", "application/json", r)
-	//resp, err := client.PostForm("https://fonts.googleapis.com/icon?family=Material+Icons", url.Values{"49.119873046875": {"123"}, "55.819801652442436": {"123"}})
-	if err != nil {
-		log.Panic("Responce:", resp, "\nError:", err)
-	}
-	defer resp.Body.Close()
-	bytes := make([]byte, 1024)
-	for {
-		bytes = bytes[:cap(bytes)]
-		n, err := resp.Body.Read(bytes)
-		if err != nil {
-			if err == io.EOF {
-				break
-			}
-			log.Panic(err)
-		}
-		bytes = bytes[:n]
-	}
-	return string(bytes)
-}
-
-func Moscow() string {
-	//data := []byte(`{"37.622504":"55.753215"}, {"24.667522":"57.429639"}`)
-	//r := bytes.NewReader(data)
-	tr := &http.Transport{DisableKeepAlives: true}
-	client := &http.Client{Transport: tr}
-	resp, err := client.Get("https://geocode-maps.yandex.ru/1.x/?format=json&geocode=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0")
-	//resp, err := client.Head("https://fonts.googleapis.com/icon?family=Material+Icons")
-	//resp, err := client.Post("https://tms-api-service-dev.redradar.ru/fuel_calc", "application/json", r)
-	//resp, err := client.PostForm("https://fonts.googleapis.com/icon?family=Material+Icons", url.Values{"49.119873046875": {"123"}, "55.819801652442436": {"123"}})
-	if err != nil {
-		log.Panic("Responce:", resp, "\nError:", err)
-	}
-	defer resp.Body.Close()
-	bytes := make([]byte, 1024)
-	for {
-		bytes = bytes[:cap(bytes)]
-		n, err := resp.Body.Read(bytes)
-		if err != nil {
-			if err == io.EOF {
-				break
-			}
-			log.Panic(err)
-		}
-		bytes = bytes[:n]
-	}
-	return string(bytes)
-} // min_fuel_balance_km: 0, min_distance: 0, min_benefit: 0, min_fuel_level_percent:0 , max_distance_from_route: 0, fuel_types: 0
-
 func main() {
 
 	//data := []byte(`{"fueltank_volume": 600,"consumption": 30,"fuel_in_tank": 100,"min_fuel_balance_litres": 50,"min_fuel_balance_km": 0,"min_distance": 0,"min_benefit": 0,"min_fuel_level_percent":0 ,"max_distance_from_route": 0,"fuel_types": 0, "nav_points": [0:"24.667522 57.429639", 1:37.622504 55.753215"]"}`)
 
 	type znach struct {
-		fueltank_volume         int
-		consumption             int
-		fuel_in_tank            int
-		min_fuel_balance_litres int
-		min_fuel_balance_km     int
-		min_distance            int
-		min_benefit             int
-		min_fuel_level_percent  int
-		max_distance_from_route int
-		fuel_types              int
-		nav_points              []float64
+		Fueltank_volume         int `json:"fueltank_volume"`
+		Consumption             int `json:"consumption"`
+		Fuel_in_tank            int `json:"fuel_in_tank"`
+		Min_fuel_balance_litres int `json:"min_fuel_balance_litres"`
+		Min_fuel_balance_km     int `json:"min_fuel_balance_km"`
+		Min_distance            int `json:"min_distance"`
+		Min_benefit             int `json:"min_benefit"`
+		Min_fuel_level_percent  int `json:"min_fuel_level_percent"`
+		Max_distance_from_route int `json:"max_distance_from_route"`
+		Fuel_types              int `json:"fuel_types"`
+		//From                    []float64 `json:"navAddressFrom:"`
+		//	Addres                  []float64 `json:"navAddressTo:"`
+		Nav_points []string `json:"nav_points"`
 	}
 
-	znacheniya := znach{
-		fueltank_volume:         600,
-		consumption:             30,
-		fuel_in_tank:            100,
-		min_fuel_balance_litres: 50,
-		min_fuel_balance_km:     0,
-		min_distance:            0,
-		min_benefit:             0,
-		min_fuel_level_percent:  0,
-		max_distance_from_route: 0,
-		fuel_types:              0,
-		nav_points:              []float64{37.622504, 55.753215, 49.106324, 55.798551}}
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Min_fuel_balance_km:     0,
+		Min_distance:            0,
+		Min_benefit:             0,
+		Min_fuel_level_percent:  0,
+		Max_distance_from_route: 0,
+		Fuel_types:              0,
+		//From:                    []float64{37.622504, 55.753215},
+		//	Addres:                  []float64{49.106324, 55.798551},
+		Nav_points: []string{"37.622504 55.753215", "49.106324 55.798551"}}
 
-	fmt.Println(znacheniya)
+	//fmt.Println(znachVar1)
 
-	data, _ := json.Marshal(znacheniya)
+	znachVar2, _ := json.Marshal(znachVar1)
 
-	fmt.Println(data)
+	fmt.Println(string(znachVar2))
 
-	r := bytes.NewReader(data)
+	r := bytes.NewReader(znachVar2)
 	tr := &http.Transport{DisableKeepAlives: true}
 	client := &http.Client{Transport: tr}
 	//resp, err := client.FormPost("https://tms-api-service-dev.redradar.ru/fuel_calc", "application/json", r)
 	resp, err := client.Post("https://tms-api-service-dev.redradar.ru/fuel_calc", "application/json, text/plain, */*", r)
 	//v := r
-	fmt.Println(r)
+	//fmt.Println(r)
 	if err != nil {
 		log.Panic("Responce:", resp, "\nError:", err)
 	}
