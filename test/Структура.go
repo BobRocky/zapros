@@ -4,9 +4,20 @@ import (
 	"fmt"
 )
 
+func zikl() {
+
+	if i == 0 {
+		q := 10
+		return q
+	} else if i == 1 {
+		q := 11
+	}
+
+}
+
 func main() {
 
-	i := 1
+	i := 0
 
 	for i <= 4 {
 		i = i + 1
@@ -38,7 +49,6 @@ func main() {
 		Orenburg = 55.096955 51.768199
 		Izhevsk = 53.204843 56.852593
 		Perm = 56.229398 58.010374
-		Yekaterinburg = 60,597,465 56,838,011
 		KhantyMansiysk = 69.018902 61.00318
 		Nizhnevartovsk = 76.569628 60.939716
 		Krasnoyarsk = 92.852572 56.010563
@@ -56,8 +66,9 @@ func main() {
 		Vladivostok = 131.885485 43.115536
 		Murmansk = 33.074981 68.970682
 		Surgut = 73.396221 61.254035
-		Urengoy = 76.680974 66.083963
-		Yakutsk = 129,732,663 62.028103*/
+		Urengoy = 76.680974 66.083963*/
+
+		fmt.Println(q)
 
 		type znach struct {
 			fueltank_volume         int
