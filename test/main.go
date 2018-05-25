@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"net/http"
 )
@@ -13,7 +14,7 @@ import (
 func main() {
 
 	i := 0
-	for i <= 100 {
+	for i <= 0 {
 
 		i = i + 1
 
@@ -61,7 +62,19 @@ func main() {
 			}
 			defer resp.Body.Close()
 
-			bytes := make([]byte, 1024*10)
+			fmt.Println("response Status:", resp.Status)
+			fmt.Println("response Headers:", resp.Header)
+			body, _ := ioutil.ReadAll(resp.Body)
+			fmt.Println("response Body:", string(body))
+
+			/*client := &http.Client{}
+			resp, err := client.Do(req)
+			if err != nil {
+				panic(err)
+			}
+			defer resp.Body.Close()
+
+			bytes := make([]byte, 1024*36)
 			for {
 				bytes = bytes[:cap(bytes)]
 				n, err := resp.Body.Read(bytes)
@@ -74,7 +87,7 @@ func main() {
 				bytes = bytes[:n]
 			}
 			log.Println(string(bytes))
-			fmt.Println(i)
+			fmt.Println(i)*/
 		case 2:
 			x := "37.6172999 55.755826"
 			y := "28.331786, 57.819365"

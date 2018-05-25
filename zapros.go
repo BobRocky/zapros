@@ -45,27 +45,6 @@ func zapr1(c chan string) {
 	req.Header.Set("X-Custom-Header", "myvalue")
 	req.Header.Set("Content-Type", "application/json")
 
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		panic(err)
-	}
-	defer resp.Body.Close()
-
-	bytes := make([]byte, 1024*10)
-	for {
-		bytes = bytes[:cap(bytes)]
-		n, err := resp.Body.Read(bytes)
-		if err != nil {
-			if err == io.EOF {
-				break
-			}
-			log.Panic(err)
-		}
-		bytes = bytes[:n]
-	}
-	log.Println(string(bytes))
-
 }
 
 func zapr2(c chan string) {
@@ -104,6 +83,18 @@ func zapr2(c chan string) {
 	req.Header.Set("X-Custom-Header", "myvalue")
 	req.Header.Set("Content-Type", "application/json")
 
+}
+
+func main() {
+
+	var c chan string = make(chan string)
+
+	go zapr1(c)
+	go zapr2(c)
+
+	var input string
+	fmt.Scanln(&input)
+
 	client := &http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
@@ -124,16 +115,4 @@ func zapr2(c chan string) {
 		bytes = bytes[:n]
 	}
 	log.Println(string(bytes))
-
-}
-
-func main() {
-
-	var c chan string = make(chan string)
-
-	go zapr1(c)
-	go zapr2(c)
-
-	var input string
-	fmt.Scanln(&input)
 }

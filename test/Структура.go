@@ -1,10 +1,21 @@
-package main
+package znacheniya
 
-import (
-	"fmt"
-)
+type znach struct {
+	Fueltank_volume         int `json:"fueltank_volume"`
+	Consumption             int `json:"consumption"`
+	Fuel_in_tank            int `json:"fuel_in_tank"`
+	Min_fuel_balance_litres int `json:"min_fuel_balance_litres"`
+	Min_fuel_balance_km     int `json:"min_fuel_balance_km"`
+	Min_distance            int `json:"min_distance"`
+	Min_benefit             int `json:"min_benefit"`
+	Min_fuel_level_percent  int `json:"min_fuel_level_percent"`
+	Max_distance_from_route int `json:"max_distance_from_route"`
+	Fuel_types              int `json:"fuel_types"`
 
-func zikl() {
+	Nav_points []string `json:"nav_points"`
+}
+
+/*func zikl() {
 
 	if i == 0 {
 		q := 10
@@ -66,7 +77,7 @@ func main() {
 		Vladivostok = 131.885485 43.115536
 		Murmansk = 33.074981 68.970682
 		Surgut = 73.396221 61.254035
-		Urengoy = 76.680974 66.083963*/
+		Urengoy = 76.680974 66.083963
 
 		fmt.Println(q)
 
@@ -102,4 +113,4 @@ func main() {
 
 		fmt.Println(znacheniya)
 	}
-}
+}*/
