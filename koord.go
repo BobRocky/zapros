@@ -1,4 +1,4 @@
-type znach struct {
+type znach struct { 36 72 73
 Moscow = 37.622504 55.753215
 Peter = 30.315868 59.939095
 Pskov = 28.331786 57.819365
@@ -6,7 +6,6 @@ Arkhangelsk = 40.516939 64.539393
 Astrakhan = 48.033574 46.347869
 Krasnodar = 38.974711 45.035566
 Sochi = 39.723062 43.585525
-molensk = 39.723062 43.585525
 Makhachkala = 47.504682 42.98306
 Terrible = 45.694909 43.317776
 Elista = 44.270181 46.308309
