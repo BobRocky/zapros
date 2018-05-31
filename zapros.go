@@ -72,6 +72,7 @@ func zapr1(c chan string) {
 
 	znachVar2 := zapro()
 	_ = znachVar2
+	fmt.Println("1")
 
 }
 
@@ -91,6 +92,7 @@ func zapr2(c chan string) {
 
 	znachVar2 := zapro()
 	_ = znachVar2
+	fmt.Println("2")
 }
 
 func zapr3(c chan string) {
@@ -109,6 +111,8 @@ func zapr3(c chan string) {
 
 	znachVar2 := zapro()
 	_ = znachVar2
+
+	fmt.Println("3")
 
 }
 
@@ -1867,6 +1871,912 @@ func zapr100(c chan string) {
 	_ = znachVar2
 }
 
+func zapr101(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "73.396221 61.254035"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr102(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "33.074981 68.970682"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+
+func zapr103(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "131.885485 43.115536"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr104(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "135.071917 48.480223"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr105(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "113.499432 52.033973"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr106(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "107.584574 51.834464"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr107(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "104.28066 52.286387"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr108(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "83.769948 53.355084"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr109(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "86.087314 55.354968"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr110(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "82.92043 55.030199"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr111(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "73.368212 54.989342"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr112(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "65.534328 57.153033"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+
+func zapr113(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "54.738227 55.984619"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr114(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "61.40259 55.160026"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr115(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "92.852572 56.010563"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr116(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "76.569628 60.939716"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr117(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "69.018902 61.00318"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr118(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "56.229398 58.010374"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr119(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "53.204843 56.852593"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr120(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "55.096955 51.768199"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr121(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "46.034158 51.533103"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr122(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "50.101783 53.195538"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+
+func zapr123(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "39.414526 57.185866"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr124(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "44.516939 48.707103"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr125(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "44.270181 46.308309"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr126(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "45.694909 43.317776"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr127(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "47.504682 42.98306"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr128(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "39.723062 43.585525"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr129(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "38.974711 45.035566"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr130(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "48.033574 46.347869"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr131(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "40.516939 64.539393"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr132(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "28.331786 57.819365"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+
+func zapr133(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "30.315868 59.939095"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr134(c chan string) {
+
+	x := "76.680974 66.083963"
+	y := "37.622504 55.753215"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr135(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "33.074981 68.970682"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr136(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "131.885485 43.115536"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr137(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "135.071917 48.480223"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr138(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "113.499432 52.033973"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr139(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "107.584574 51.834464"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr140(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "104.28066 52.286387"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr141(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "83.769948 53.355084"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr142(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "86.087314 55.354968"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+
+func zapr143(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "82.92043 55.030199"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr144(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "65.534328 57.153033"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr145(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "54.738227 55.984619"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr146(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "61.40259 55.160026"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr147(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "92.852572 56.010563"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr148(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "76.569628 60.939716"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+func zapr149(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "69.018902 61.00318"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+
+}
+
+func zapr150(c chan string) {
+
+	x := "73.396221 61.254035"
+	y := "56.229398 58.010374"
+
+	znachVar1 := &znach{
+		Fueltank_volume:         600,
+		Consumption:             30,
+		Fuel_in_tank:            100,
+		Min_fuel_balance_litres: 50,
+		Nav_points:              []string{x, y}}
+
+	znachVar2, _ = json.Marshal(znachVar1)
+
+	znachVar2 := zapro()
+	_ = znachVar2
+}
+
 var w string
 
 func main() {
@@ -1875,8 +2785,6 @@ func main() {
 	go zapr2(c)
 	go zapr3(c)
 	go zapr4(c)
-	go zapr4(c)
-	go zapr5(c)
 	go zapr5(c)
 	go zapr6(c)
 	go zapr7(c)
@@ -1973,7 +2881,58 @@ func main() {
 	go zapr98(c)
 	go zapr99(c)
 	go zapr100(c)
-
+	/*
+		go zapr101(c)
+		go zapr102(c)
+		go zapr103(c)
+		go zapr104(c)
+		go zapr105(c)
+		go zapr106(c)
+		go zapr107(c)
+		go zapr108(c)
+		go zapr109(c)
+		go zapr110(c)
+		go zapr111(c)
+		go zapr112(c)
+		go zapr113(c)
+		go zapr114(c)
+		go zapr115(c)
+		go zapr116(c)
+		go zapr117(c)
+		go zapr118(c)
+		go zapr119(c)
+		go zapr120(c)
+		go zapr121(c)
+		go zapr122(c)
+		go zapr123(c)
+		go zapr124(c)
+		go zapr125(c)
+		go zapr126(c)
+		go zapr127(c)
+		go zapr128(c)
+		go zapr129(c)
+		go zapr130(c)
+		go zapr131(c)
+		go zapr132(c)
+		go zapr133(c)
+		go zapr134(c)
+		go zapr135(c)
+		go zapr136(c)
+		go zapr137(c)
+		go zapr138(c)
+		go zapr139(c)
+		go zapr140(c)
+		go zapr141(c)
+		go zapr142(c)
+		go zapr143(c)
+		go zapr144(c)
+		go zapr145(c)
+		go zapr146(c)
+		go zapr147(c)
+		go zapr148(c)
+		go zapr149(c)
+		go zapr150(c)
+	*/
 	var input string
 	fmt.Scanln(&input)
 
